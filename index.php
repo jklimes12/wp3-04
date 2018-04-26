@@ -1,12 +1,20 @@
 <?php
-include "function.php";
-echo "jak je ta budova stará";
-$buildingAge= readline("stáří budovy: ");
-if (desBuilding($buildingAge)) {
-  echo "budova je stará";
-}
-else {
-  echo "budova je mladá";
+include_once "function.php";
+
+$building[] = 50;
+$building[] = 102;
+$building[] = 80;
+
+
+
+for ($i=0; $i < count($building) ; $i++) {
+
+  if (desbuilding($building[$i])) {
+    echo "budovu se stářím ". $building[$i]. " nelze zdemolovat</br>";
+  }
+  else {
+    echo "budovu se stářím ". $building[$i]. " lze zdemolovat</br>";
+  }
 }
 
 ?>
